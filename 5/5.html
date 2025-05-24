@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклади списків</title>
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <h1>Списки</h1>
+
+    <div class="section">
+        <h2>1. Маркировані списки (ul)</h2>
+
+        <h3>Стандартні маркери:</h3>
+
+        <p><span class="code">list-style-type: disc;</span></p>
+        <ul class="list-disc">
+            <li>Елемент з кружечком</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><span class="code">list-style-type: circle;</span></p>
+        <ul class="list-circle">
+            <li>Порожній кружечок</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><span class="code">list-style-type: square;</span></p>
+        <ul class="list-square">
+            <li>Квадратний маркер</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><span class="code">list-style-type: none;</span></p>
+        <ul class="list-none">
+            <li>Без маркера</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <h3>Маркери з зображеннями:</h3>
+
+        <p><span class="code">list-style-image: url('icons/arrow.png');</span></p>
+        <ul class="list-custom-image">
+            <li>Стрілка як маркер (з папки icons/)</li>
+            <li>Другий елемент зі стрілкою</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><span class="code">background-image для кращого контролю</span></p>
+        <ul class="list-star">
+            <li>Зірочка з icons/star.png</li>
+            <li>Другий елемент з зірочкою</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <h3>Емоджі як маркери:</h3>
+        <ul class="list-emoji">
+            <li>Емоджі через CSS :before</li>
+            <li>Не залежить від зображень</li>
+            <li>Завжди відображається</li>
+        </ul>
+
+        <h3>Позиція маркерів:</h3>
+
+        <p><span class="code">list-style-position: outside;</span> (за замовчуванням)</p>
+        <ul class="list-outside">
+            <li>Маркер поза текстом елементу списку, що створює відступ для всього тексту</li>
+            <li>Другий довгий елемент</li>
+        </ul>
+
+        <p><span class="code">list-style-position: inside;</span></p>
+        <ul class="list-inside">
+            <li>Маркер всередині тексту елементу списку, тому текст обгортає маркер</li>
+            <li>Другий довгий елемент</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Нумеровані списки (ol)</h2>
+
+        <p><span class="code">list-style-type: decimal;</span></p>
+        <ol class="list-decimal">
+            <li>Звичайні числа</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ol>
+
+        <p><span class="code">list-style-type: decimal-leading-zero;</span></p>
+        <ol class="list-decimal-leading-zero">
+            <li>Числа з нулем</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ol>
+
+        <p><span class="code">list-style-type: lower-alpha;</span></p>
+        <ol class="list-lower-alpha">
+            <li>Малі латинські літери</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ol>
+
+        <p><span class="code">list-style-type: upper-alpha;</span></p>
+        <ol class="list-upper-alpha">
+            <li>Великі латинські літери</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ol>
+
+        <p><span class="code">list-style-type: lower-roman;</span></p>
+        <ol class="list-lower-roman">
+            <li>Малі римські цифри</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ol>
+
+        <p><span class="code">list-style-type: upper-roman;</span></p>
+        <ol class="list-upper-roman">
+            <li>Великі римські цифри</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ol>
+
+        <p><span class="code">list-style-type: lower-greek;</span></p>
+        <ol class="list-lower-greek">
+            <li>Грецькі літери</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ol>
+
+        <h3>Кастомна нумерація через CSS counters:</h3>
+        <ol class="list-custom-counter">
+            <li>Кастомний формат нумерації</li>
+            <li>Можна додати будь-який префікс</li>
+            <li>Повний контроль над виглядом</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>3. Багаторівневі списки</h2>
+
+        <h3>Змішаний багаторівневий список:</h3>
+        <ul class="multilevel">
+            <li>Перший рівень (диск)
+                <ul>
+                    <li>Другий рівень (коло)
+                        <ul>
+                            <li>Третій рівень (квадрат)</li>
+                            <li>Ще один елемент третього рівня</li>
+                        </ul>
+                    </li>
+                    <li>Повернулися на другий рівень</li>
+                </ul>
+            </li>
+            <li>Знову перший рівень
+                <ol>
+                    <li>Нумерований підсписок (a, b, c)
+                        <ol>
+                            <li>Ще глибший рівень (i, ii, iii)</li>
+                            <li>Другий елемент</li>
+                        </ol>
+                    </li>
+                    <li>Повернулися на рівень вище</li>
+                </ol>
+            </li>
+        </ul>
+
+        <h3>Кастомний багаторівневий зі стилізацією:</h3>
+        <ul class="custom-multilevel">
+            <li>Головна категорія
+                <ul>
+                    <li>Підкaтeгoрія 1
+                        <ul>
+                            <li>Деталь 1</li>
+                            <li>Деталь 2</li>
+                        </ul>
+                    </li>
+                    <li>Підкaтeгoрія 2</li>
+                </ul>
+            </li>
+            <li>Друга головна категорія
+                <ul>
+                    <li>Підкaтeгoрія A</li>
+                    <li>Підкaтeгoрія B</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Списки визначень (dl, dt, dd)</h2>
+
+        <h3>Стандартний список визначень:</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language - мова розмітки гіпертексту, що використовується для створення веб-сторінок.</dd>
+
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets - каскадні таблиці стилів, що використовуються для опису зовнішнього вигляду документа.</dd>
+
+            <dt>JavaScript</dt>
+            <dd>Мова програмування, що виконується у браузері та додає інтерактивність веб-сторінкам.</dd>
+            <dd>Також може використовуватися на сервері (Node.js).</dd>
+        </dl>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Робота з зображеннями</title>
+    <link rel="stylesheet" href="images.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Робота з зображеннями</h1>
+
+        <h2>1. Абзац з фоновим зображенням</h2>
+        <p class="paragraph-with-bg">
+            Зображення повторюється (background-repeat: repeat)
+            для створення текстури. розмір текстури: 256x256px або 512x512px.
+        </p>
+
+        <h2>2. Блок з фоновим зображенням</h2>
+        <div class="block-with-bg">
+            Фонове зображення
+        </div>
+
+        <h2>3. Декілька фонових зображень</h2>
+        <div class="multiple-backgrounds">
+            Два фонових зображення: overlay + основний фон
+        </div>
+
+        <h2>4. Вставка зображень з різними рамками</h2>
+        <div class="images-gallery">
+            <img src="imgs/original-45adb237a6b6e2283785ce216fca5703.webp" alt="Фото 1" class="img-border-solid">
+            <img src="imgs/Big800x600px.png" alt="Фото 2" class="img-border-gradient">
+            <img src="imgs/ml82-marble-stone-interior-film-sample-pattern-800x600px.jpg" alt="Фото 3" class="img-with-shadow">
+        </div>
+
+        <h2>5. Блок з border-image</h2>
+        <div class="border-image-block">
+            Рамка з зображення
+        </div>
+
+        <h2>6. Блок з тінню та закругленими кутами</h2>
+        <div class="shadow-box">
+            Цей блок демонструє box-shadow та border-radius.<br>
+            Використовується складна тінь з кількох шарів.
+        </div>
+
+        <h2>7. Responsive зображення</h2>
+        <img src="imgs/1920x1080-hd-nature-red-forest-8r6e53pratps3j65.jpg" alt="Велике фото" class="responsive-img">
+    </div>
+</body>
+</html>

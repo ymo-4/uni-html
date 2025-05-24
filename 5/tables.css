@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    color: black;
+}
+
+.section {
+    margin: 30px 0;
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+/* 1. МАРКИРОВАНІ СПИСКИ */
+
+/* Стандартні маркери */
+.list-disc { list-style-type: disc; }
+.list-circle { list-style-type: circle; }
+.list-square { list-style-type: square; }
+.list-none { list-style-type: none; }
+
+/* Кастомні маркери з зображеннями */
+.list-custom-image {
+    list-style-image: url('imgs/Oxygen-Icons.org-Oxygen-Actions-go-next.16.png');
+}
+
+.list-star {
+    list-style: none;
+}
+
+.list-star li {
+    background-image: url('imgs/star.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    padding-left: 25px;
+}
+
+.list-emoji {
+    list-style: none;
+}
+
+.list-emoji li:before {
+    content: "🔹 ";
+}
+
+/* Позиція маркерів */
+.list-inside { list-style-position: inside; }
+.list-outside { list-style-position: outside; }
+
+/* 2. НУМЕРОВАНІ СПИСКИ */
+
+.list-decimal { list-style-type: decimal; }
+.list-decimal-leading-zero { list-style-type: decimal-leading-zero; }
+.list-lower-alpha { list-style-type: lower-alpha; }
+.list-upper-alpha { list-style-type: upper-alpha; }
+.list-lower-roman { list-style-type: lower-roman; }
+.list-upper-roman { list-style-type: upper-roman; }
+.list-lower-greek { list-style-type: lower-greek; }
+
+/* Кастомна нумерація */
+.list-custom-counter {
+    list-style: none;
+    counter-reset: custom-counter;
+}
+
+.list-custom-counter li {
+    counter-increment: custom-counter;
+}
+
+.list-custom-counter li:before {
+    content: "№" counter(custom-counter) " ";
+}
+
+/* 3. БАГАТОРІВНЕВІ СПИСКИ */
+
+.multilevel ul {
+    list-style-type: circle;
+}
+
+.multilevel ul ul {
+    list-style-type: square;
+}
+
+.multilevel ol {
+    list-style-type: lower-alpha;
+}
+
+.multilevel ol ol {
+    list-style-type: lower-roman;
+}
+
+/* Кастомний багаторівневий */
+.custom-multilevel {
+    list-style: none;
+}
+
+.custom-multilevel > li:before {
+    content: "▶ ";
+}
+
+.custom-multilevel ul {
+    list-style: none;
+}
+
+.custom-multilevel ul li:before {
+    content: "→ ";
+}
+
+.custom-multilevel ul ul li:before {
+    content: "• ";
+}
+
+/* 4. СПИСКИ ВИЗНАЧЕНЬ */
+
+dt {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+dd {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.note {
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.code {
+    background: lightgray;
+    padding: 2px 4px;
+    font-family: monospace;
+}
