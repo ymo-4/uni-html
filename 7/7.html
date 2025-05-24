@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основи веб-розробки: повний посібник</title>
+    <link rel="stylesheet" href="7.css">
+</head>
+<body>
+    <h1 id="top">Основи веб-розробки</h1>
+
+    <div class="table-of-contents">
+        <h2>Зміст</h2>
+        <ul>
+            <li><a href="#introduction">Вступ до веб-розробки</a></li>
+            <li><a href="#html-basics">Основи HTML</a>
+                <ul>
+                    <li><a href="#html-structure">Структура HTML документа</a></li>
+                    <li><a href="#html-elements">HTML елементи</a></li>
+                </ul>
+            </li>
+            <li><a href="#css-fundamentals">Основи CSS</a>
+                <ul>
+                    <li><a href="#css-selectors">Селектори CSS</a></li>
+                    <li><a href="#css-properties">Властивості CSS</a></li>
+                </ul>
+            </li>
+            <li><a href="#javascript-intro">Вступ до JavaScript</a></li>
+            <li><a href="#responsive-design">Адаптивний дизайн</a></li>
+            <li><a href="#best-practices">Найкращі практики</a></li>
+            <li><a href="#conclusion">Висновок</a></li>
+            <li><a href="#references">Посилання та ресурси</a></li>
+        </ul>
+    </div>
+
+    <div id="introduction" class="section">
+        <h2>1. Вступ до веб-розробки</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <p>Веб-розробка — це <strong class="important">мистецтво та наука</strong> створення веб-сайтів та веб-додатків. У сучасному цифровому світі <em class="emphasis">веб-розробка стала однією з найважливіших</em> галузей інформаційних технологій.</p>
+
+        <img src="imgs/www.png" alt="Веб-розробка" class="text-image">
+
+        <p>Веб-розробка включає в себе <span class="highlight">три основні технології</span>: HTML для структури, CSS для стилізації та JavaScript для інтерактивності. Ці технології працюють разом, щоб створити <span class="underlined">функціональні та привабливі</span> веб-сайти.</p>
+
+        <div class="clearfix"></div>
+
+        <div class="quote">
+            "Веб — це не просто технологія, це спосіб з'єднання людей та ідей по всьому світу." — Тім Бернерс-Лі, винахідник Всесвітньої павутини
+        </div>
+
+        <p>Історія веб-розробки розпочалася в <span class="monospace">1990 році</span>, коли Тім Бернерс-Лі створив перший веб-браузер та веб-сервер. З тих пір технології швидко розвивалися, і сьогодні ми маємо <del class="strikethrough">прості статичні сторінки</del> складні інтерактивні додатки.</p>
+
+        <figure>
+            <img src="imgs/timeline.png" alt="Історія веб-розробки">
+            <figcaption>Рис. 1. Часова лінія розвитку веб-технологій з 1990 по 2024 рік</figcaption>
+        </figure>
+
+        <h3>Основні напрямки веб-розробки</h3>
+
+        <p>Веб-розробка поділяється на кілька основних напрямків:</p>
+
+        <ul>
+            <li><strong>Frontend розробка</strong> — створення користувацького інтерфейсу</li>
+            <li><strong>Backend розробка</strong> — серверна логіка та бази даних</li>
+            <li><strong>Full-stack розробка</strong> — поєднання frontend та backend</li>
+            <li><strong>DevOps</strong> — автоматизація розгортання та підтримки</li>
+        </ul>
+    </div>
+
+    <div id="html-basics" class="section">
+        <h2>2. Основи HTML</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <p><abbr title="HyperText Markup Language">HTML</abbr> є <span class="large-text">основою всіх веб-сторінок</span>. Це мова розмітки, яка визначає структуру та зміст веб-документів.</p>
+
+        <h3 id="html-structure">2.1. Структура HTML документа</h3>
+
+        <p>Кожен HTML документ має <em>стандартну структуру</em>, яка включає декларацію типу документа, елемент <span class="monospace">html</span>, заголовок <span class="monospace">head</span> та тіло <span class="monospace">body</span>.</p>
+
+        <img src="imgs/html.jpg" alt="HTML структура" class="center-image">
+
+        <div class="note">
+            <strong>Важливо:</strong> Правильна структура HTML документа забезпечує коректне відображення в браузерах та доступність для користувачів з обмеженими можливостями.
+        </div>
+
+        <h4>Основні елементи структури:</h4>
+
+        <ol>
+            <li><span class="monospace">&lt;!DOCTYPE html&gt;</span> — декларація HTML5</li>
+            <li><span class="monospace">&lt;html&gt;</span> — кореневий елемент</li>
+            <li><span class="monospace">&lt;head&gt;</span> — метадані сторінки</li>
+            <li><span class="monospace">&lt;body&gt;</span> — видимий контент</li>
+        </ol>
+
+        <h3 id="html-elements">2.2. HTML елементи</h3>
+
+        <p>HTML складається з елементів, які визначають різні типи контенту. Елементи можуть бути <strong>блочними</strong> або <strong>рядковими</strong>.</p>
+
+        <figure>
+            <img src="imgs/dom-class-hierarchy.svg" alt="Діаграма HTML елементів">
+            <figcaption>Рис. 2. Основні HTML елементи та їх призначення</figcaption>
+        </figure>
+
+        <h4>Блочні елементи:</h4>
+        <ul>
+            <li><span class="monospace">&lt;div&gt;</span> — універсальний контейнер</li>
+            <li><span class="monospace">&lt;p&gt;</span> — параграф тексту</li>
+            <li><span class="monospace">&lt;h1-h6&gt;</span> — заголовки різних рівнів</li>
+            <li><span class="monospace">&lt;ul&gt;, &lt;ol&gt;</span> — списки</li>
+        </ul>
+
+        <h5>Рядкові елементи:</h5>
+        <ul>
+            <li><span class="monospace">&lt;span&gt;</span> — універсальний рядковий контейнер</li>
+            <li><span class="monospace">&lt;a&gt;</span> — посилання</li>
+            <li><span class="monospace">&lt;strong&gt;, &lt;em&gt;</span> — виділення тексту</li>
+            <li><span class="monospace">&lt;img&gt;</span> — зображення <img src="imgs/star.png" alt="іконка" class="inline-image"></li>
+        </ul>
+
+        <h6>Семантичні елементи HTML5:</h6>
+        <p class="small-text">HTML5 ввів нові семантичні елементи, які надають змістовне значення структурі документа: <span class="monospace">header, nav, main, article, section, aside, footer</span>.</p>
+    </div>
+
+    <div id="css-fundamentals" class="section">
+        <h2>3. Основи CSS</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <p><abbr title="Cascading Style Sheets">CSS</abbr> — це мова стилів, яка <span class="highlight">відповідає за зовнішній вигляд</span> веб-сторінок. CSS дозволяє розділити контент від презентації.</p>
+
+        <img src="imgs/css.jpg" alt="CSS основи" class="text-image">
+
+        <p>CSS працює за принципом <em>каскадності</em>, що означає, що стилі можуть успадковуватися та перевизначатися. Це дає розробникам <strong>гнучкість та контроль</strong> над дизайном сторінки.</p>
+
+        <div class="clearfix"></div>
+
+        <h3 id="css-selectors">3.1. Селектори CSS</h3>
+
+        <p>Селектори — це спосіб <span class="underlined">вибрати елементи</span> на сторінці для застосування стилів. Існує багато типів селекторів, кожен з яких має свою специфіку.</p>
+
+        <figure>
+            <img src="imgs/css-selectors-1.jpg" alt="Таблиця CSS селекторів">
+            <figcaption>Рис. 3. Основні типи CSS селекторів та їх застосування</figcaption>
+        </figure>
+
+        <h4>Типи селекторів:</h4>
+
+        <ol>
+            <li><strong>Елементний селектор</strong>: <span class="monospace">p { color: blue; }</span></li>
+            <li><strong>Класовий селектор</strong>: <span class="monospace">.highlight { background: yellow; }</span></li>
+            <li><strong>ID селектор</strong>: <span class="monospace">#header { font-size: 24px; }</span></li>
+            <li><strong>Псевдокласи</strong>: <span class="monospace">a:hover { color: red; }</span></li>
+        </ol>
+
+        <h3 id="css-properties">3.2. Властивості CSS</h3>
+
+        <p>CSS має <span class="large-text">сотні властивостей</span> для контролю зовнішнього вигляду елементів. Найважливіші категорії включають текст, кольори, розміри, позиціонування та анімації.</p>
+
+        <div class="note">
+            <strong>Порада:</strong> Почніть з основних властивостей: <span class="monospace">color, background-color, font-size, margin, padding, border</span>.
+        </div>
+
+        <h4>Основні категорії властивостей:</h4>
+
+        <ul>
+            <li><strong>Текстові властивості</strong>: <span class="monospace">font-family, font-size, text-align, line-height</span></li>
+            <li><strong>Кольори та фони</strong>: <span class="monospace">color, background-color, background-image</span></li>
+            <li><strong>Розміри та відступи</strong>: <span class="monospace">width, height, margin, padding</span></li>
+            <li><strong>Рамки</strong>: <span class="monospace">border, border-radius, box-shadow</span></li>
+        </ul>
+
+        <img src="imgs/box_model.png" alt="CSS Box Model" class="center-image">
+    </div>
+
+    <div id="javascript-intro" class="section">
+        <h2>4. Вступ до JavaScript</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <p>JavaScript — це <span class="important">мова програмування</span>, яка додає інтерактивність веб-сторінкам. Це єдина мова програмування, яка <em>нативно підтримується всіма браузерами</em>.</p>
+
+        <img src="imgs/Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" class="text-image">
+
+        <p>Спочатку JavaScript використовувався лише для простих інтерактивних елементів, але сьогодні це <span class="highlight">повноцінна мова програмування</span>, яка може виконувати складні завдання як у браузері, так і на сервері.</p>
+
+        <div class="clearfix"></div>
+
+        <figure>
+            <img src="imgs/1_FZqSnFinahk40hQWMr3_5g.png" alt="Еволюція JavaScript">
+            <figcaption>Рис. 4. Розвиток JavaScript від простих скриптів до сучасних фреймворків</figcaption>
+        </figure>
+
+        <h3>Основні можливості JavaScript:</h3>
+
+        <ul>
+            <li>Маніпуляція DOM елементами</li>
+            <li>Обробка подій користувача</li>
+            <li>Асинхронні запити до сервера (AJAX)</li>
+            <li>Валідація форм</li>
+            <li>Анімації та ефекти</li>
+        </ul>
+
+        <div class="quote">
+            "JavaScript — це мова, яка дозволяє веб-сторінкам оживати та взаємодіяти з користувачами у реальному часі."
+        </div>
+
+        <h4>Сучасні фреймворки та бібліотеки:</h4>
+
+        <p>Сьогодні розробники використовують потужні інструменти: <span class="monospace">React, Vue.js, Angular, jQuery</span>. Ці фреймворки значно <span class="underlined">спрощують розробку</span> складних додатків.</p>
+    </div>
+
+    <div id="responsive-design" class="section">
+        <h2>5. Адаптивний дизайн</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <p>Адаптивний дизайн — це підхід до веб-дизайну, який забезпечує <strong>оптимальне відображення</strong> веб-сайту на різних пристроях та розмірах екранів.</p>
+
+        <img src="imgs/adaptiv.jpg" alt="Адаптивний дизайн" class="center-image">
+
+        <h3>Принципи адаптивного дизайну:</h3>
+
+        <ol>
+            <li><strong>Гнучка сітка</strong> — використання відсоткових розмірів замість фіксованих</li>
+            <li><strong>Гнучкі зображення</strong> — зображення адаптуються до розміру контейнера</li>
+            <li><strong>Медіа-запити</strong> — різні стилі для різних розмірів екранів</li>
+        </ol>
+
+        <figure>
+            <img src="imgs/media.jpg" alt="Приклад медіа-запитів">
+            <figcaption>Рис. 5. Приклад використання медіа-запитів для адаптивного дизайну</figcaption>
+        </figure>
+
+        <div class="note">
+            <strong>Статистика:</strong> Більше 50% веб-трафіку сьогодні походить з мобільних пристроїв, тому адаптивний дизайн є <span class="important">критично важливим</span>.
+        </div>
+    </div>
+
+    <div id="best-practices" class="section">
+        <h2>6. Найкращі практики веб-розробки</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <p>Дотримання найкращих практик допомагає створювати <span class="highlight">якісні, підтримувані та доступні</span> веб-сайти.</p>
+
+        <h3>Основні принципи:</h3>
+
+        <ul>
+            <li><strong>Семантична розмітка</strong> — використання правильних HTML елементів</li>
+            <li><strong>Доступність</strong> — підтримка користувачів з обмеженими можливостями</li>
+            <li><strong>Продуктивність</strong> — оптимізація швидкості завантаження</li>
+            <li><strong>SEO</strong> — оптимізація для пошукових систем</li>
+        </ul>
+
+        <img src="imgs/article-73.jpg" alt="Веб-доступність" class="text-image">
+
+        <p>Веб-доступність означає, що сайт може використовувати <em>кожен користувач</em>, незалежно від його фізичних можливостей. Це включає підтримку скрін-рідерів, клавіатурної навігації та <span class="underlined">контрастних кольорів</span>.</p>
+
+        <div class="clearfix"></div>
+
+        <h4>Інструменти для тестування:</h4>
+
+        <ol>
+            <li>Валідатори HTML та CSS</li>
+            <li>Інструменти перевірки доступності</li>
+            <li>Тести швидкості завантаження</li>
+            <li>Кросбраузерне тестування</li>
+        </ol>
+    </div>
+
+    <div id="conclusion" class="section">
+        <h2>7. Висновок</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <p>Веб-розробка — це <span class="large-text">захопливий та динамічний</span> напрямок, який постійно розвивається. Освоївши основи HTML, CSS та JavaScript, ви <strong>заклали міцний фундамент</strong> для подальшого розвитку у цій галузі.</p>
+
+        <div class="quote">
+            "Найкращий спосіб вивчити веб-розробку — це практикуватися, експериментувати та не боятися робити помилки."
+        </div>
+
+        <img src="imgs/article-72.jpg" alt="Майбутнє веб-розробки" class="center-image">
+
+        <h3>Подальші кроки:</h3>
+
+        <ul>
+            <li>Вивчення сучасних фреймворків</li>
+            <li>Освоєння серверних технологій</li>
+            <li>Робота з базами даних</li>
+            <li>Практика на реальних проектах</li>
+        </ul>
+
+        <p class="small-text">Пам'ятайте: веб-розробка — це не тільки технічні навички, але й <em>творчість, логічне мислення та увага до деталей</em>.</p>
+    </div>
+
+    <div id="references" class="section">
+        <h2>8. Посилання та ресурси</h2>
+        <a href="#top" class="back-to-top">↑ Вгору</a>
+
+        <h3>Попередні роботи:</h3>
+        <ul>
+            <li><a href="https://ymo-4.github.io/uni-html/3/3.html" class="external-link" target="_blank">Робота з зображеннями в CSS</a></li>
+            <li><a href="https://ymo-4.github.io/uni-html/5/5.html" class="external-link" target="_blank">Приклади списків HTML/CSS</a></li>
+            <li><a href="https://ymo-4.github.io/uni-html/6/6.html" class="external-link" target="_blank">Форматування таблиць CSS</a></li>
+        </ul>
+
+        <h3>Корисні онлайн ресурси:</h3>
+        <ul>
+            <li><a href="https://developer.mozilla.org/" class="external-link" target="_blank">MDN Web Docs</a> — найкраща документація по веб-технологіях</li>
+            <li><a href="https://www.w3schools.com/" class="external-link" target="_blank">W3Schools</a> — інтерактивні уроки та довідники</li>
+            <li><a href="https://caniuse.com/" class="external-link" target="_blank">Can I Use</a> — сумісність веб-технологій з браузерами</li>
+            <li><a href="https://codepen.io/" class="external-link" target="_blank">CodePen</a> — онлайн редактор для експериментів</li>
+        </ul>
+
+        <h3>Рекомендовані книги:</h3>
+        <ol>
+            <li>"HTML and CSS: Design and Build Websites" by Jon Duckett</li>
+            <li>"JavaScript: The Good Parts" by Douglas Crockford</li>
+            <li>"Don't Make Me Think" by Steve Krug</li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: black;
+}
+
+/* ЗАГОЛОВКИ */
+h1 {
+    font-size: 28px;
+    color: black;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: black;
+    border-bottom: 2px solid gray;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+h4 {
+    font-size: 18px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 16px;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+h6 {
+    font-size: 14px;
+    color: black;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+/* НАВІГАЦІЯ */
+.table-of-contents {
+    background-color: lightgray;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.table-of-contents ul {
+    list-style-type: decimal;
+}
+
+.table-of-contents a {
+    color: black;
+    text-decoration: none;
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+/* ТЕКСТОВЕ ФОРМАТУВАННЯ */
+.highlight {
+    background-color: yellow;
+}
+
+.important {
+    font-weight: bold;
+    color: black;
+}
+
+.emphasis {
+    font-style: italic;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.large-text {
+    font-size: 18px;
+}
+
+.monospace {
+    font-family: monospace;
+    background-color: lightgray;
+    padding: 2px 4px;
+}
+
+.quote {
+    border-left: 4px solid gray;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    background-color: whitesmoke;
+    padding: 15px 15px 15px 35px;
+}
+
+/* ЗОБРАЖЕННЯ */
+.inline-image {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    border: 1px solid gray;
+}
+
+.text-image {
+    width: 150px;
+    height: 100px;
+    float: left;
+    margin: 0 15px 15px 0;
+    border: 2px solid black;
+}
+
+.center-image {
+    display: block;
+    margin: 20px auto;
+    width: 300px;
+    height: 200px;
+    border: 2px solid gray;
+}
+
+/* FIGURE та FIGCAPTION */
+figure {
+    margin: 30px 0;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+figure img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: black;
+    font-size: 14px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+/* ПОСИЛАННЯ */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.external-link {
+    color: green;
+    font-weight: bold;
+}
+
+.back-to-top {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.back-to-top:hover {
+    background-color: gray;
+}
+
+/* СПИСКИ */
+ul, ol {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+/* ПАРАГРАФИ */
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* ДОДАТКОВІ ЕЛЕМЕНТИ */
+.section {
+    margin: 40px 0;
+}
+
+.note {
+    border: 1px solid gray;
+    background-color: lightyellow;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

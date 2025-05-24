@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.section {
+    border: 1px solid black;
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.marquee-container {
+    border: 1px solid gray;
+    height: 50px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.vertical-container {
+    border: 1px solid gray;
+    height: 100px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+/* CSS АНІМАЦІЇ */
+
+/* Рух зліва направо */
+.move-left-right {
+    width: 100px;
+    height: 30px;
+    background-color: lightgray;
+    border: 1px solid black;
+    animation: moveLeftRight 3s infinite;
+    margin: 10px 0;
+}
+
+@keyframes moveLeftRight {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(200px); }
+    100% { transform: translateX(0px); }
+}
+
+/* Обертання */
+.rotate-box {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border: 1px solid black;
+    animation: rotate 2s infinite linear;
+    margin: 20px;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Пульсація */
+.pulse-box {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    animation: pulse 1.5s infinite;
+    margin: 20px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Зміна кольору */
+.color-change {
+    width: 150px;
+    height: 40px;
+    border: 2px solid black;
+    animation: colorChange 4s infinite;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 40px;
+}
+
+@keyframes colorChange {
+    0% { background-color: white; color: black; }
+    25% { background-color: lightgray; color: black; }
+    50% { background-color: gray; color: white; }
+    75% { background-color: black; color: white; }
+    100% { background-color: white; color: black; }
+}
+
+/* Стрибаючий текст */
+.bounce-text {
+    animation: bounce 1s infinite;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes moveCircle {
+    0% { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
+}
+
+/* Зникаючий елемент */
+.fade-box {
+    width: 100px;
+    height: 50px;
+    background-color: lightgray;
+    border: 1px solid black;
+    animation: fadeInOut 2s infinite;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 50px;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Розтягування */
+.stretch-box {
+    width: 50px;
+    height: 30px;
+    background-color: gray;
+    border: 1px solid black;
+    animation: stretch 2s infinite;
+    margin: 20px 0;
+}
+
+@keyframes stretch {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(3); }
+}
+
+/* Тремтіння */
+.shake-box {
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    animation: shake 0.5s infinite;
+    margin: 10px 0;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Діагональний рух */
+.diagonal-move {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border: 1px solid black;
+    animation: moveDiagonal 3s infinite;
+    margin: 10px 0;
+}
+
+@keyframes moveDiagonal {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(100px, 50px); }
+    50% { transform: translate(200px, 0); }
+    75% { transform: translate(100px, -50px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes combined {
+    0% {
+        transform: translateX(0) rotate(0deg) scale(1);
+        background-color: black;
+    }
+    25% {
+        transform: translateX(100px) rotate(90deg) scale(1.2);
+        background-color: gray;
+    }
+    50% {
+        transform: translateX(200px) rotate(180deg) scale(0.8);
+        background-color: lightgray;
+    }
+    75% {
+        transform: translateX(100px) rotate(270deg) scale(1.5);
+        background-color: gray;
+    }
+    100% {
+        transform: translateX(0) rotate(360deg) scale(1);
+        background-color: black;
+    }
+}
+
+/* Анімація при hover */
+.hover-animation {
+    width: 100px;
+    height: 50px;
+    background-color: lightgray;
+    border: 1px solid black;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.3s;
+}
+
+.hover-animation:hover {
+    animation: hoverEffect 0.5s;
+    background-color: black;
+    color: white;
+}
+
+@keyframes hoverEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2) rotate(5deg); }
+    100% { transform: scale(1); }
+}

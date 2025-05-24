@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форматування таблиць CSS</title>
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <h1>Таблиці</h1>
+
+    <div class="section">
+        <h2>1. Базова таблиця</h2>
+        <p><span class="code">border: 1px solid black;</span> для таблиці та комірок</p>
+
+        <table class="basic-table">
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+            <tr>
+                <td>Дані 1</td>
+                <td>Дані 2</td>
+                <td>Дані 3</td>
+            </tr>
+            <tr>
+                <td>Дані 4</td>
+                <td>Дані 5</td>
+                <td>Дані 6</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 2. BORDER-COLLAPSE -->
+    <div class="section">
+        <h2>2. Border-collapse</h2>
+
+        <h3><span class="code">border-collapse: collapse;</span></h3>
+        <table class="collapsed-table">
+            <tr>
+                <th>Ім'я</th>
+                <th>Вік</th>
+                <th>Місто</th>
+            </tr>
+            <tr>
+                <td>Петро</td>
+                <td>25</td>
+                <td>Київ</td>
+            </tr>
+            <tr>
+                <td>Марія</td>
+                <td>30</td>
+                <td>Львів</td>
+            </tr>
+        </table>
+
+        <h3><span class="code">border-collapse: separate; border-spacing: 5px;</span></h3>
+        <table class="separated-table">
+            <tr>
+                <th>Товар</th>
+                <th>Ціна</th>
+                <th>Кількість</th>
+            </tr>
+            <tr>
+                <td>Хліб</td>
+                <td>15 грн</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Молоко</td>
+                <td>25 грн</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>3. Стилізація заголовків</h2>
+        <p><span class="code">th { background-color: black; color: white; }</span></p>
+
+        <table class="collapsed-table styled-headers">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Назва</th>
+                    <th>Опис</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Проект А</td>
+                    <td>Розробка сайту</td>
+                    <td>В роботі</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Проект Б</td>
+                    <td>Мобільний додаток</td>
+                    <td>Завершено</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>4. Зебра-стилізація</h2>
+        <p><span class="code">tr:nth-child(even) { background-color: lightgray; }</span></p>
+
+        <table class="zebra-table">
+            <tr>
+                <th>№</th>
+                <th>Студент</th>
+                <th>Група</th>
+                <th>Оцінка</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Іван Петренко</td>
+                <td>КІ-23-1ФМБ</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Анна Сидоренко</td>
+                <td>КІ-23-1</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Олег Коваль</td>
+                <td>АР-23-1</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Марина Гриценко</td>
+                <td>АР-23-1</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>5. Вирівнювання тексту</h2>
+
+        <table class="alignment-table">
+            <tr>
+                <th>Горизонтальне</th>
+                <th>Вертикальне</th>
+                <th>Комбіноване</th>
+            </tr>
+            <tr>
+                <td class="left-align middle-align">text-align: left;<br>vertical-align: middle;</td>
+                <td class="center-align top-align">text-align: center;<br>vertical-align: top;</td>
+                <td class="right-align bottom-align">text-align: right;<br>vertical-align: bottom;</td>
+            </tr>
+            <tr>
+                <td class="center-align middle-align">По центру<br>посередині</td>
+                <td class="left-align bottom-align">Ліворуч<br>знизу</td>
+                <td class="right-align top-align">Праворуч<br>зверху</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>6. Розміри таблиці та колонок</h2>
+        <p><span class="code">width: 80%; height: 200px;</span></p>
+
+        <table class="sized-table">
+            <tr>
+                <th class="col-20">20%</th>
+                <th class="col-30">30%</th>
+                <th class="col-50">50%</th>
+            </tr>
+            <tr>
+                <td>Коротка колонка</td>
+                <td>Середня колонка</td>
+                <td>Довга колонка з більшою кількістю тексту</td>
+            </tr>
+            <tr>
+                <td>А</td>
+                <td>Б</td>
+                <td>В</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>7. Hover ефекти</h2>
+        <p><span class="code">tr:hover { background-color: lightgray; }</span></p>
+
+        <table class="hover-table">
+            <tr>
+                <th>Наведіть курсор</th>
+                <th>На рядки</th>
+                <th>І комірки</th>
+            </tr>
+            <tr>
+                <td>Рядок 1</td>
+                <td>Дані 1</td>
+                <td>Інфо 1</td>
+            </tr>
+            <tr>
+                <td>Рядок 2</td>
+                <td>Дані 2</td>
+                <td>Інфо 2</td>
+            </tr>
+            <tr>
+                <td>Рядок 3</td>
+                <td>Дані 3</td>
+                <td>Інфо 3</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>8. Caption (заголовок таблиці)</h2>
+
+        <table class="caption-table">
+            <caption>Звіт продажів за квартал</caption>
+            <tr>
+                <th>Місяць</th>
+                <th>Продажі</th>
+                <th>Прибуток</th>
+            </tr>
+            <tr>
+                <td>Січень</td>
+                <td>100,000 грн</td>
+                <td>25,000 грн</td>
+            </tr>
+            <tr>
+                <td>Лютий</td>
+                <td>120,000 грн</td>
+                <td>30,000 грн</td>
+            </tr>
+            <tr>
+                <td>Березень</td>
+                <td>150,000 грн</td>
+                <td>37,500 грн</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>9. Colspan та Rowspan</h2>
+
+        <table class="collapsed-table">
+            <tr>
+                <th colspan="3">Об'єднані колонки (colspan="3")</th>
+            </tr>
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Об'єднані рядки (rowspan="2")</td>
+                <td>Дані 1</td>
+                <td>Дані 2</td>
+            </tr>
+            <tr>
+                <td>Дані 3</td>
+                <td>Дані 4</td>
+            </tr>
+            <tr>
+                <td>Дані 5</td>
+                <td colspan="2">Об'єднані колонки (colspan="2")</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>10. Різні типи рамок</h2>
+
+        <table class="complex-borders">
+            <tr>
+                <th>Стандартна</th>
+                <th>Товста</th>
+                <th>Пунктирна</th>
+                <th>Штрихова</th>
+            </tr>
+            <tr>
+                <td>Звичайна рамка</td>
+                <td class="thick-border">Товста рамка</td>
+                <td class="dotted-border">Пунктирна рамка</td>
+                <td class="dashed-border">Штрихова рамка</td>
+            </tr>
+            <tr>
+                <td>Ще дані</td>
+                <td class="thick-border">Товсто</td>
+                <td class="dotted-border">Пунктир</td>
+                <td class="dashed-border">Штрих</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>11. Responsive таблиця</h2>
+        <p><span class="code">overflow-x: auto;</span> для горизонтального скролу</p>
+
+        <div class="responsive-container">
+            <table class="responsive-table">
+                <tr>
+                    <th>Дуже довгий заголовок 1</th>
+                    <th>Дуже довгий заголовок 2</th>
+                    <th>Дуже довгий заголовок 3</th>
+                    <th>Дуже довгий заголовок 4</th>
+                    <th>Дуже довгий заголовок 5</th>
+                    <th>Дуже довгий заголовок 6</th>
+                </tr>
+                <tr>
+                    <td>Довгий текст в комірці 1</td>
+                    <td>Довгий текст в комірці 2</td>
+                    <td>Довгий текст в комірці 3</td>
+                    <td>Довгий текст в комірці 4</td>
+                    <td>Довгий текст в комірці 5</td>
+                    <td>Довгий текст в комірці 6</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>12. Empty cells</h2>
+
+        <h3><span class="code">empty-cells: show;</span> (за замовчуванням)</h3>
+        <table class="empty-cells-show">
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <td>Дані</td>
+                <td></td>
+                <td>Дані</td>
+            </tr>
+        </table>
+
+        <h3><span class="code">empty-cells: hide;</span></h3>
+        <table class="empty-cells-hide">
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <td>Дані</td>
+                <td></td>
+                <td>Дані</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

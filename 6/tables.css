@@ -1,0 +1,262 @@
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3 {
+            color: black;
+        }
+
+        .section {
+            margin: 30px 0;
+            border: 1px solid gray;
+            padding: 15px;
+        }
+
+        .code {
+            background: lightgray;
+            padding: 2px 4px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        /* 1. БАЗОВА ТАБЛИЦЯ */
+        .basic-table {
+            border: 1px solid black;
+        }
+
+        .basic-table th,
+.basic-table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* 2. BORDER-COLLAPSE */
+.collapsed-table {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.collapsed-table th,
+.collapsed-table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.separated-table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: 2px solid black;
+}
+
+.separated-table th,
+.separated-table td {
+    border: 1px solid gray;
+    padding: 8px;
+}
+
+/* 3. СТИЛІЗАЦІЯ ЗАГОЛОВКІВ */
+.styled-headers th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+}
+
+.styled-headers td {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+/* 4. ЗЕБРА-СТИЛІЗАЦІЯ */
+.zebra-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.zebra-table th {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.zebra-table td {
+    padding: 8px;
+    border: 1px solid gray;
+}
+
+.zebra-table tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.zebra-table tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* 5. ВИРІВНЮВАННЯ */
+.alignment-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.alignment-table th,
+.alignment-table td {
+    border: 1px solid black;
+    padding: 15px;
+    height: 50px;
+}
+
+.left-align { text-align: left; }
+.center-align { text-align: center; }
+.right-align { text-align: right; }
+
+.top-align { vertical-align: top; }
+.middle-align { vertical-align: middle; }
+.bottom-align { vertical-align: bottom; }
+
+/* 6. РОЗМІРИ ТАБЛИЦІ */
+.sized-table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 200px;
+}
+
+.sized-table th,
+.sized-table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.col-20 { width: 20%; }
+.col-30 { width: 30%; }
+.col-50 { width: 50%; }
+
+/* 7. HOVER ЕФЕКТИ */
+.hover-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.hover-table th,
+.hover-table td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.hover-table th {
+    background-color: darkgray;
+    color: white;
+}
+
+.hover-table tr:hover {
+    background-color: lightgray;
+}
+
+.hover-table td:hover {
+    background-color: gray;
+    color: white;
+}
+
+/* 8. CAPTION СТИЛІЗАЦІЯ */
+.caption-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.caption-table caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: lightgray;
+}
+
+.caption-table th,
+.caption-table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* 9. RESPONSIVE ТАБЛИЦЯ */
+.responsive-container {
+    overflow-x: auto;
+    border: 1px solid gray;
+}
+
+.responsive-table {
+    border-collapse: collapse;
+    min-width: 600px;
+    width: 100%;
+}
+
+.responsive-table th,
+.responsive-table td {
+    border: 1px solid gray;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.responsive-table th {
+    background-color: darkgray;
+    color: white;
+}
+
+/* 10. СКЛАДНІ РАМКИ */
+.complex-borders {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.complex-borders th {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+.complex-borders td {
+    border: 1px solid gray;
+    padding: 8px;
+}
+
+.thick-border {
+    border: 3px solid black !important;
+}
+
+.dotted-border {
+    border: 2px dotted gray !important;
+}
+
+.dashed-border {
+    border: 2px dashed black !important;
+}
+
+/* 11. EMPTY CELLS */
+.empty-cells-show {
+    border-collapse: separate;
+    border-spacing: 2px;
+    empty-cells: show;
+}
+
+.empty-cells-hide {
+    border-collapse: separate;
+    border-spacing: 2px;
+    empty-cells: hide;
+}
+
+.empty-cells-show th,
+.empty-cells-show td,
+.empty-cells-hide th,
+.empty-cells-hide td {
+    border: 1px solid black;
+    padding: 8px;
+}

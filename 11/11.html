@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блоки та вкладення</title>
+    <link rel="stylesheet" href="11.css">
+</head>
+<body>
+    <h1>Блоки та вкладення</h1>
+
+    <div class="section">
+        <h2>1. Базові блоки з різним оформленням</h2>
+
+        <div class="simple-block">
+            Простий блок
+        </div>
+
+        <div class="colored-block">
+            Кольоровий блок
+        </div>
+
+        <div class="thick-border-block">
+            Товста рамка
+        </div>
+
+        <div style="width: 160px; height: 70px; border: 2px solid purple; background-color: pink; margin: 10px; text-align: center; line-height: 70px;">
+            Inline стилі
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Просте вкладення (блок в блоці)</h2>
+
+        <div class="container-1">
+            <div style="text-align: center; padding: 10px;">Зовнішній контейнер</div>
+
+            <div class="inner-block-1">
+                Внутрішній блок 1
+            </div>
+
+            <div class="inner-block-1" style="background-color: lightblue;">
+                Внутрішній блок 2
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. Подвійне вкладення (блок в блоці в блоці)</h2>
+
+        <div class="container-2">
+            <div style="text-align: center; padding: 5px; font-weight: bold;">Головний контейнер</div>
+
+            <div class="middle-block">
+                <div style="text-align: center; font-size: 14px;">Середній блок</div>
+
+                <div class="inner-inner-block">
+                    Глибокий
+                </div>
+            </div>
+
+            <div class="middle-block" style="background-color: lightcoral;">
+                <div style="text-align: center; font-size: 14px;">Другий середній</div>
+
+                <div class="inner-inner-block" style="background-color: lightgreen;">
+                    Блок
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Потрійне вкладення з float</h2>
+
+        <div class="container-3 clearfix">
+            <div style="text-align: center; padding: 10px; font-weight: bold;">Найбільший контейнер</div>
+
+            <div class="level-1">
+                <div style="text-align: center; font-size: 12px; margin-bottom: 5px;">Рівень 1</div>
+
+                <div class="level-2">
+                    <div style="text-align: center; font-size: 11px;">Рівень 2</div>
+
+                    <div class="level-3">
+                        Р3
+                    </div>
+                </div>
+            </div>
+
+            <div class="level-1" style="background-color: lightblue;">
+                <div style="text-align: center; font-size: 12px; margin-bottom: 5px;">Рівень 1</div>
+
+                <div class="level-2" style="background-color: lightyellow;">
+                    <div style="text-align: center; font-size: 11px;">Рівень 2</div>
+
+                    <div class="level-3" style="background-color: lightcoral;">
+                        Р3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Різні способи центрування тексту</h2>
+
+        <h3>Line-height:</h3>
+        <div class="center-line-height">
+            Центр через line-height
+        </div>
+
+        <h3>Flexbox:</h3>
+        <div class="center-flex">
+            Центр через flex
+        </div>
+
+        <h3>Table-cell:</h3>
+        <div class="center-table-cell">
+            Центр через table-cell
+        </div>
+
+        <h3>Багаторядковий текст з flex:</h3>
+        <div style="width: 200px; height: 100px; border: 2px solid black; background-color: lightgray; display: flex; justify-content: center; align-items: center; margin: 10px; text-align: center;">
+            Багато тексту в центрі блоку з переносом рядків
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>6. Складне вкладення з позиціонуванням</h2>
+
+        <div class="complex-container">
+            <div class="corner-block top-left">
+                Верх ліво
+            </div>
+
+            <div class="corner-block top-right">
+                Верх право
+            </div>
+
+            <div class="corner-block bottom-left">
+                Низ ліво
+            </div>
+
+            <div class="corner-block bottom-right">
+                Низ право
+            </div>
+
+            <div class="center-content">
+                <h4 style="margin: 0; text-align: center;">Центральний блок</h4>
+
+                <div class="center-inner">
+                    Вкладений центр
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>7. Сітка вкладених блоків</h2>
+
+        <div class="grid-container">
+            <div style="text-align: center; padding: 10px; font-weight: bold;">Сітка 3x3</div>
+
+            <div class="grid-row">
+                <div class="grid-cell">1,1</div>
+                <div class="grid-cell">1,2</div>
+                <div class="grid-cell">1,3</div>
+            </div>
+
+            <div class="grid-row">
+                <div class="grid-cell" style="background-color: lightblue;">2,1</div>
+                <div class="grid-cell" style="background-color: lightgreen;">2,2</div>
+                <div class="grid-cell" style="background-color: lightcoral;">2,3</div>
+            </div>
+
+            <div class="grid-row">
+                <div class="grid-cell">3,1</div>
+                <div class="grid-cell">3,2</div>
+                <div class="grid-cell">3,3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>8. Блоки з різними типами рамок</h2>
+
+        <div style="width: 180px; height: 80px; background-color: white; margin: 10px; text-align: center; line-height: 80px;" class="dashed-border">
+            Пунктирна рамка
+        </div>
+
+        <div style="width: 180px; height: 80px; background-color: white; margin: 10px; text-align: center; line-height: 80px;" class="dotted-border">
+            Крапкова рамка
+        </div>
+
+        <div style="width: 180px; height: 80px; background-color: white; margin: 10px; text-align: center; line-height: 80px;" class="double-border">
+            Подвійна рамка
+        </div>
+
+        <div style="width: 180px; height: 80px; border-top: 5px solid red; border-right: 3px solid blue; border-bottom: 4px solid green; border-left: 2px solid orange; background-color: white; margin: 10px; text-align: center; line-height: 80px;">
+            Різні сторони
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>9. Градаційне вкладення з фонами</h2>
+
+        <div style="width: 500px; height: 300px; border: 4px solid black; background-color: red; padding: 20px; margin: 10px;">
+            <div style="text-align: center; color: white; padding: 5px;">Червоний рівень</div>
+
+            <div style="width: 400px; height: 200px; border: 3px solid white; background-color: orange; padding: 15px; margin: 10px auto;">
+                <div style="text-align: center; color: white; padding: 5px;">Помаранчевий рівень</div>
+
+                <div style="width: 300px; height: 120px; border: 2px solid black; background-color: yellow; padding: 10px; margin: 10px auto;">
+                    <div style="text-align: center; padding: 5px;">Жовтий рівень</div>
+
+                    <div style="width: 200px; height: 60px; border: 1px solid red; background-color: green; margin: 10px auto; color: white; text-align: center; line-height: 60px;">
+                        Зелений центр
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна сторінка</title>
+    <link rel="stylesheet" href="14.css">
+</head>
+<body>
+    <!-- ЗАГОЛОВОК -->
+    <header>
+        <div class="container">
+            <h1>Адаптивна сторінка</h1>
+            <p>Демонстрація <abbr title="HyperText Markup Language">HTML</abbr> тегів та <abbr title="Cascading Style Sheets">CSS</abbr> адаптивності</p>
+        </div>
+    </header>
+
+    <!-- НАВІГАЦІЯ -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#contact">Контакти</a></li>
+                <li><a href="#blog">Блог</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ОСНОВНИЙ КОНТЕНТ -->
+    <div class="container">
+        <main>
+            <!-- КОНТЕНТ -->
+            <div class="content">
+                <!-- BLOCKQUOTE -->
+                <div class="text-section">
+                    <h2>Цитати та блочні цитати</h2>
+
+                    <p>Альберт Ейнштейн казав: <q>Уява важливіша за знання</q>. Ця коротка цитата показує використання тегу <code>&lt;q&gt;</code>.</p>
+
+                    <blockquote>
+                        Веб-розробка — це не просто програмування. Це мистецтво створення цифрових рішень, які поєднують функціональність та естетику. Кожна лінія коду має значення, кожен піксель на своєму місці.
+                        <cite>— Невідомий веб-розробник</cite>
+                    </blockquote>
+
+                    <p>Для довгих цитат використовуємо <code>&lt;blockquote&gt;</code> з тегом <code>&lt;cite&gt;</code> для вказання джерела.</p>
+                </div>
+
+                <!-- СКОРОЧЕННЯ -->
+                <div class="text-section">
+                    <h2>Скорочення та абревіатури</h2>
+
+                    <p>В веб-розробці часто використовуються скорочення:</p>
+                    <ul>
+                        <li><abbr title="HyperText Markup Language">HTML</abbr> — мова розмітки</li>
+                        <li><abbr title="Cascading Style Sheets">CSS</abbr> — каскадні таблиці стилів</li>
+                        <li><abbr title="JavaScript">JS</abbr> — мова програмування</li>
+                        <li><abbr title="Application Programming Interface">API</abbr> — програмний інтерфейс</li>
+                        <li><abbr title="Search Engine Optimization">SEO</abbr> — оптимізація для пошукових систем</li>
+                    </ul>
+
+                    <p>Наведіть курсор на скорочення, щоб побачити повну назву.</p>
+                </div>
+
+                <!-- BDO -->
+                <div class="text-section">
+                    <h2>Напрямок тексту (BDO)</h2>
+
+                    <p>Звичайний текст зліва направо: Hello World</p>
+
+                    <div class="bdo-example">
+                        <p>Текст справа наліво: <bdo dir="rtl">Hello World</bdo></p>
+                        <p>Змішаний текст: Початок <bdo dir="rtl">dlroW olleH</bdo> кінець</p>
+                        <p>Цифри в зворотному порядку: <bdo dir="rtl">123456789</bdo></p>
+                    </div>
+
+                    <p>Тег <code>&lt;bdo&gt;</code> змінює напрямок відображення тексту.</p>
+                </div>
+
+                <!-- АДРЕСИ -->
+                <div class="text-section">
+                    <h2>Контактна інформація</h2>
+
+                    <address>
+                        <strong>Наша компанія</strong><br>
+                        вул. Хрещатик, 1<br>
+                        Київ, 01001<br>
+                        Україна<br><br>
+                        Телефон: <a href="tel:+380123456789">+380 12 345 67 89</a><br>
+                        Email: <a href="mailto:info@company.ua">info@company.ua</a><br>
+                        Веб-сайт: <a href="https://company.ua">company.ua</a>
+                    </address>
+
+                    <p>Тег <code>&lt;address&gt;</code> використовується для контактної інформації.</p>
+                </div>
+
+                <!-- ВИЗНАЧЕННЯ -->
+                <div class="text-section">
+                    <h2>Визначення термінів</h2>
+
+                    <p><dfn>Адаптивний дизайн</dfn> — це підхід до веб-дизайну, при якому сторінки автоматично підлаштовуються під різні розміри екранів.</p>
+
+                    <p><dfn title="Document Object Model">DOM</dfn> — це програмний інтерфейс для HTML документів.</p>
+
+                    <p>Перше згадування терміну виділяється тегом <code>&lt;dfn&gt;</code>.</p>
+                </div>
+
+                <!-- КОД -->
+                <div class="text-section">
+                    <h2>Код та технічні елементи</h2>
+
+                    <p>Приклад коду: <code>document.getElementById('myElement')</code></p>
+
+                    <p>Клавіатурні комбінації: натисніть <kbd>Ctrl</kbd> + <kbd>C</kbd> для копіювання</p>
+
+                    <p>Вивід програми: <samp>Hello, World!</samp></p>
+
+                    <p>Змінна в формулі: E = mc<sup>2</sup>, де <var>m</var> — маса, <var>c</var> — швидкість світла</p>
+
+                    <p>Хімічна формула води: H<sub>2</sub>O</p>
+                </div>
+
+                <!-- ВИДІЛЕННЯ -->
+                <div class="text-section">
+                    <h2>Виділення та позначення</h2>
+
+                    <p>Важливий текст: <mark>цей текст підсвічений</mark> для привернення уваги.</p>
+
+                    <p>Зміни в документі: <del>старий текст</del> <ins>новий текст</ins></p>
+
+                    <p>Математичні індекси: x<sub>1</sub> + x<sub>2</sub> = y<sup>n</sup></p>
+
+                    <p>Виділення тегами: <strong>жирний текст</strong>, <em>курсив</em>, <u>підкреслений</u></p>
+                </div>
+
+                <!-- ЦИТУВАННЯ -->
+                <div class="text-section">
+                    <h2>Цитування джерел</h2>
+
+                    <p>Згідно з дослідженням, опублікованим у <cite>Journal of Web Development</cite>, адаптивний дизайн покращує користувацький досвід на 40%.</p>
+
+                    <p>У книзі <cite>"HTML5 та CSS3 для початківців"</cite> автор детально розглядає всі аспекти сучасної веб-розробки.</p>
+
+                    <blockquote>
+                        Майбутнє веб-розробки за адаптивними та доступними рішеннями, які працюють на всіх пристроях однаково добре.
+                        <cite>— Конференція WebDev 2024</cite>
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- БІЧНА ПАНЕЛЬ -->
+            <div class="sidebar">
+                <h3>Додаткова інформація</h3>
+
+                <div class="note">
+                    <h4>Тестування адаптивності</h4>
+                    <p>Змініть розмір вікна браузера або відкрийте сторінку на мобільному пристрої для перевірки адаптивності.</p>
+                </div>
+
+                <h4>Використані теги:</h4>
+                <ul>
+                    <li><code>&lt;q&gt;</code> — короткі цитати</li>
+                    <li><code>&lt;blockquote&gt;</code> — блочні цитати</li>
+                    <li><code>&lt;abbr&gt;</code> — абревіатури</li>
+                    <li><code>&lt;address&gt;</code> — контактна інформація</li>
+                    <li><code>&lt;cite&gt;</code> — джерела цитат</li>
+                    <li><code>&lt;bdo&gt;</code> — напрямок тексту</li>
+                    <li><code>&lt;dfn&gt;</code> — визначення термінів</li>
+                    <li><code>&lt;code&gt;</code> — код</li>
+                    <li><code>&lt;kbd&gt;</code> — клавіши</li>
+                    <li><code>&lt;samp&gt;</code> — вивід програми</li>
+                    <li><code>&lt;var&gt;</code> — змінні</li>
+                    <li><code>&lt;mark&gt;</code> — виділення</li>
+                    <li><code>&lt;del&gt;</code> — видалений текст</li>
+                    <li><code>&lt;ins&gt;</code> — вставлений текст</li>
+                    <li><code>&lt;sub&gt;</code> — нижній індекс</li>
+                    <li><code>&lt;sup&gt;</code> — верхній індекс</li>
+                </ul>
+
+                <h4>Медіа-запити:</h4>
+                <ul>
+                    <li>Мобільні: <= 480px</li>
+                    <li>Планшети: <= 768px</li>
+                    <li>Десктоп: > 768px</li>
+                    <li>Великі екрани: >= 1200px</li>
+                    <li>Друк: спеціальні стилі</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

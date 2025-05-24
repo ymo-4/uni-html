@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форми</title>
+    <link rel="stylesheet" href="9.css">
+    <script type="text/javascript" src="9.js"></script>
+</head>
+<body>
+    <h1>Форми</h1>
+
+    <div class="form-section">
+        <h2>1. Базові елементи форм</h2>
+
+        <form>
+            <label>Ім'я: <input type="text" name="name" placeholder="Введіть ім'я"></label><br>
+            <label>Email: <input type="email" name="email" placeholder="test@example.com"></label><br>
+            <label>Вік: <input type="number" name="age" min="1" max="100"></label><br>
+
+            <label>Місто:
+            <select name="city">
+                <option value="">-- Оберіть --</option>
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odesa">Одеса</option>
+            </select>
+            </label><br>
+
+            <fieldset>
+                <legend>Стать:</legend>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жіноча</label>
+            </fieldset>
+
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Підписатися на новини</label><br>
+
+            <button type="button" onclick="showFormData()">Показати дані</button>
+            <button type="reset">Очистити</button>
+        </form>
+
+        <div id="formResult" class="result">Результат з'явиться тут</div>
+    </div>
+
+    <div class="form-section">
+        <h2>2. Калькулятор</h2>
+
+        <form>
+            <label>Перше число: <input type="number" id="calc1" step="any"></label><br>
+            <label>Операція:
+            <select id="operation">
+                <option value="+">Додавання (+)</option>
+                <option value="-">Віднімання (-)</option>
+                <option value="*">Множення (*)</option>
+                <option value="/">Ділення (/)</option>
+                <option value="^">Степінь (^)</option>
+            </select>
+            </label><br>
+            <label>Друге число: <input type="number" id="calc2" step="any"></label><br>
+
+            <button type="button" onclick="calculate()">Обчислити</button>
+        </form>
+
+        <div id="calcResult" class="result">Результат обчислення</div>
+    </div>
+
+    <div class="form-section">
+        <h2>3. Конвертер валют</h2>
+
+        <form>
+            <label>Сума в гривнях: <input type="number" id="amount" step="0.01" min="0"></label><br>
+            <label>Конвертувати в:
+            <select id="toCurrency">
+                <option value="USD">Долар США</option>
+                <option value="EUR">Євро</option>
+                <option value="PLN">Злотий</option>
+            </select>
+            </label><br>
+
+            <button type="button" onclick="convertCurrency()">Конвертувати</button>
+        </form>
+
+        <div id="currencyResult" class="result">Результат конвертації</div>
+    </div>
+
+    <div class="form-section">
+        <h2>4. Обчислення площі</h2>
+
+        <form>
+            <label>Фігура:
+            <select id="shapeType" onchange="showShapeInputs()">
+                <option value="">-- Оберіть --</option>
+                <option value="rectangle">Прямокутник</option>
+                <option value="circle">Коло</option>
+            </select>
+            </label><br>
+
+            <div id="shapeInputs"></div>
+
+            <button type="button" onclick="calculateArea()">Обчислити</button>
+        </form>
+
+        <div id="areaResult" class="result">Результат</div>
+    </div>
+
+    <div class="form-section">
+        <h2>5. Генератор паролів</h2>
+
+        <form>
+            <label>Довжина: <input type="number" id="passwordLength" value="8" min="4" max="20"></label><br>
+
+            <input type="checkbox" id="includeNumbers" checked>
+            <label for="includeNumbers">Включити цифри</label><br>
+
+            <button type="button" onclick="generatePassword()">Згенерувати</button>
+        </form>
+
+        <div id="passwordResult" class="result">Пароль з'явиться тут</div>
+    </div>
+
+    <div class="form-section">
+        <h2>6. Перевірка числа</h2>
+
+        <form>
+            <label>Число: <input type="number" id="checkNumber"></label><br>
+
+            <button type="button" onclick="checkNumberProperties()">Перевірити</button>
+        </form>
+
+        <div id="numberResult" class="result">Результат</div>
+    </div>
+
+    <div class="form-section">
+        <h2>7. Таблиця множення</h2>
+
+        <form>
+            <label>Число: <input type="number" id="multiplyNumber" value="5" min="1" max="10"></label><br>
+
+            <button type="button" onclick="generateMultiplicationTable()">Створити таблицю</button>
+        </form>
+
+        <div id="tableResult" class="result">Таблиця</div>
+    </div>
+
+    <div class="form-section">
+        <h2>8. Форма реєстрації</h2>
+
+        <form id="registrationForm">
+            <label>Ім'я: <input type="text" id="firstName" required></label><br>
+            <label>Email: <input type="email" id="regEmail" required></label><br>
+            <label>Вік: <input type="number" id="userAge" min="16" max="100" required></label><br>
+
+            <input type="checkbox" id="agreeTerms" required>
+            <label for="agreeTerms">Погоджуюся з умовами</label><br>
+
+            <button type="button" onclick="validateAndSubmit()">Зареєструватися</button>
+        </form>
+
+        <div id="registrationResult" class="result">Результат</div>
+    </div>
+</body>
+</html>

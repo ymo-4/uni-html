@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: black;
+}
+
+.section {
+    margin: 40px 0;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+/* НАВІГАЦІЯ */
+.navigation {
+    background-color: lightgray;
+    padding: 15px;
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* БАЗОВІ ПОСИЛАННЯ */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+a:active {
+    color: darkred;
+}
+
+/* СТИЛІЗОВАНІ ПОСИЛАННЯ */
+.styled-link {
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.styled-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.external-link {
+    color: green;
+    font-weight: bold;
+}
+
+.external-link:hover {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+/* САМОСТІЙНО СТВОРЕНІ КНОПКИ */
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.custom-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.custom-button:active {
+    background-color: gray;
+}
+
+.custom-button-large {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: lightgray;
+    color: black;
+    border: 3px solid black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.custom-button-large:hover {
+    background-color: gray;
+    color: white;
+}
+
+/* КНОПКИ З "ГЕНЕРАТОРІВ" (імітація готових стилів) */
+.generator-button-1 {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.generator-button-1:hover {
+    background-color: gray;
+}
+
+.generator-button-2 {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: white;
+    color: black;
+    border: 2px solid gray;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.generator-button-2:hover {
+    border-color: black;
+    background-color: lightgray;
+}
+
+.generator-button-3 {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: gray;
+    color: white;
+    border: 1px solid black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.generator-button-3:hover {
+    background-color: darkgray;
+}
+
+/* JAVASCRIPT КНОПКА */
+.js-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.js-button:hover {
+    background-color: lightgray;
+}
+
+.js-button:active {
+    background-color: gray;
+    color: white;
+}
+
+/* ГРУПИ КНОПОК */
+.button-group {
+    margin: 20px 0;
+}
+
+.button-group .custom-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* ПОСИЛАННЯ-КНОПКИ */
+.link-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: lightgray;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.link-button:hover {
+    background-color: gray;
+    color: white;
+}
+
+
+.text-content {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+.back-to-top:hover {
+    background-color: gray;
+}
+
+.code {
+    background: lightgray;
+    padding: 2px 4px;
+    font-family: monospace;
+    font-size: 14px;
+}

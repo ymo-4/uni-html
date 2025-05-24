@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімації</title>
+    <link rel="stylesheet" href="10.css">
+    <script type="text/javascript" src="10.js"></script>
+</head>
+<body>
+    <h1>Анімації</h1>
+
+    <div class="section">
+        <h2>1. Анімації з тегом marquee</h2>
+
+        <h3>Горизонтальний рух:</h3>
+
+        <div class="marquee-container">
+            <marquee>Текст рухається зліва направо (за замовчуванням)</marquee>
+        </div>
+
+        <div class="marquee-container">
+            <marquee direction="right">Текст рухається справа наліво</marquee>
+        </div>
+
+        <div class="marquee-container">
+            <marquee behavior="alternate">Текст рухається туди-сюди</marquee>
+        </div>
+
+        <div class="marquee-container">
+            <marquee scrollamount="1">Повільний рух (scrollamount="1")</marquee>
+        </div>
+
+        <div class="marquee-container">
+            <marquee scrollamount="10">Швидкий рух (scrollamount="10")</marquee>
+        </div>
+
+        <h3>Вертикальний рух:</h3>
+
+        <div class="vertical-container">
+            <marquee direction="up" height="100">Рух знизу вгору</marquee>
+        </div>
+
+        <div class="vertical-container">
+            <marquee direction="down" height="100">Рух зверху вниз</marquee>
+        </div>
+
+        <div class="vertical-container">
+            <marquee direction="up" behavior="alternate" height="100">Вертикальний туди-сюди</marquee>
+        </div>
+
+        <h3>З додатковими параметрами:</h3>
+
+        <div class="marquee-container">
+            <marquee bgcolor="lightgray" scrolldelay="100">З фоном та затримкою</marquee>
+        </div>
+
+        <div class="marquee-container">
+            <marquee loop="3">Рух тільки 3 рази (loop="3")</marquee>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. CSS анімації</h2>
+
+        <p><strong>Рух зліва направо:</strong></p>
+        <div class="move-left-right">Рухомий блок</div>
+
+        <p><strong>Обертання:</strong></p>
+        <div class="rotate-box"></div>
+
+        <p><strong>Пульсація:</strong></p>
+        <div class="pulse-box"></div>
+
+        <p><strong>Зміна кольору:</strong></p>
+        <div class="color-change">Кольоровий текст</div>
+
+        <p><strong>Стрибаючий текст:</strong></p>
+        <div class="bounce-text">Стрибаючий текст!</div>
+
+        <p><strong>Зникаючий елемент:</strong></p>
+        <div class="fade-box">Fade</div>
+
+        <p><strong>Розтягування:</strong></p>
+        <div class="stretch-box"></div>
+
+        <p><strong>Тремтіння:</strong></p>
+        <div class="shake-box">Shake</div>
+
+        <p><strong>Діагональний рух:</strong></p>
+        <div class="diagonal-move"></div>
+
+        <p><strong>Анімація при hover (наведіть курсор):</strong></p>
+        <div class="hover-animation">Hover me!</div>
+
+        <p><strong>Анімація по кліку:</strong></p>
+        <div id="clickBox" onclick="animateOnClick()" style="width: 100px; height: 50px; background-color: lightgray; border: 1px solid black; margin: 10px 0; text-align: center; line-height: 50px; cursor: pointer;">
+            Клікни мене!
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. Комбінації marquee та CSS</h2>
+
+        <p><strong>Marquee з CSS стилізацією:</strong></p>
+        <div style="border: 2px solid black; background-color: lightgray;">
+            <marquee style="color: red; font-weight: bold; font-size: 18px;">
+                Стилізований marquee текст
+            </marquee>
+        </div>
+
+        <p><strong>CSS анімація всередині marquee:</strong></p>
+        <div class="marquee-container">
+            <marquee>
+                <span class="bounce-text" style="color: blue;">Стрибаючий текст в marquee</span>
+            </marquee>
+        </div>
+
+        <p><strong>Вкладені анімації:</strong></p>
+        <div class="marquee-container">
+            <marquee behavior="alternate">
+                <div class="rotate-box" style="display: inline-block; width: 30px; height: 30px;"></div>
+                Обертаючийся блок в marquee
+            </marquee>
+        </div>
+    </div>
+</body>
+</html>
