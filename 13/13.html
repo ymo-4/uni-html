@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мультимедійні елементи</title>
+    <link rel="stylesheet" href="13.css">
+    <script type="text/javascript" src="13.js"></script>
+</head>
+<body>
+    <h1>Мультимедійні елементи</h1>
+
+    <div class="section">
+        <h2>1. Фонове відео</h2>
+
+        <div class="background-video-section">
+            <div class="video-overlay">
+                <h3>Фонове відео з overlay</h3>
+                <p>Текст поверх відео з напівпрозорим фоном</p>
+                <button onclick="toggleBackgroundVideo()">Пауза/Відтворення</button>
+            </div>
+            <video class="background-video" autoplay muted loop>
+                <source src="vids/rickroll.mp4#t=0.3" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="note">
+            Фонове відео автоматично відтворюється без звуку
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Відео за допомогою тегу &lt;video&gt;</h2>
+
+        <div class="grid-2">
+            <div>
+                <h3>Локальне відео з контролами:</h3>
+                <video id="localVideo" controls preload="metadata">
+                    <source src="vids/rickroll.mp4#t=0.3" type="video/mp4">
+                </video>
+
+                <div class="media-controls">
+                    <button onclick="playVideo('localVideo')">Відтворити</button>
+                    <button onclick="pauseVideo('localVideo')">Пауза</button>
+                    <button onclick="stopVideo('localVideo')">Стоп</button>
+                    <button onclick="muteVideo('localVideo')">Звук Вкл/Викл</button>
+                </div>
+            </div>
+
+            <div>
+                <h3>Відео без контролів:</h3>
+                <video id="customVideo">
+                    <source src="vids/rickroll.mp4#t=0.3" type="video/mp4">
+                </video>
+
+                <div class="media-controls">
+                    <button onclick="playVideo('customVideo')">▶ Play</button>
+                    <button onclick="pauseVideo('customVideo')">⏸ Pause</button>
+                    <button onclick="rewindVideo('customVideo')">⏪ -10s</button>
+                    <button onclick="forwardVideo('customVideo')">⏩ +10s</button>
+                </div>
+
+                <p>Відео з постером та кастомними контролами</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. Відео через &lt;iframe&gt;</h2>
+
+        <div class="grid-2">
+            <div>
+                <h3>YouTube відео:</h3>
+                <iframe src="https://www.youtube.com/embed/EC-woADwShQ"
+                        title="YouTube video"
+                        allowfullscreen>
+                </iframe>
+                <p>Вставка YouTube відео з параметрами</p>
+            </div>
+
+            <div>
+                <h3>Vimeo відео:</h3>
+                <iframe src="https://player.vimeo.com/video/147365861?badge=0&autopause=0&player_id=0&app_id=58479"
+                        title="Vimeo video"
+                        allowfullscreen>
+                </iframe>
+                <p>Вставка Vimeo відео</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Аудіо за допомогою тегу &lt;audio&gt;</h2>
+
+        <div class="grid-2">
+            <div>
+                <h3>Аудіо з контролами:</h3>
+                <audio id="audioPlayer" controls preload="metadata">
+                    <source src="audio/rickroll.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="media-controls">
+                    <button onclick="playAudio()">▶ Відтворити</button>
+                    <button onclick="pauseAudio()">⏸ Пауза</button>
+                    <button onclick="stopAudio()">⏹ Стоп</button>
+                    <button onclick="changeVolume()">🔊 Гучність</button>
+                </div>
+            </div>
+
+            <div>
+                <h3>Фонова музика:</h3>
+                <audio id="backgroundMusic" loop>
+                    <source src="audio/rickroll.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="media-controls">
+                    <button onclick="toggleBackgroundMusic()">🎵 Фонова музика</button>
+                    <button onclick="playSound('beep')">🔔 Звуковий сигнал</button>
+                    <button onclick="playSound('click')">🖱 Клік</button>
+                </div>
+
+                <p>Фонова музика та звукові ефекти</p>
+
+                <!-- Приховані звуки -->
+                <audio id="beepSound" preload="auto">
+                    <source src="audio/stop-13692.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="clickSound" preload="auto">
+                    <source src="audio/pick-92276.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Карти через &lt;iframe&gt;</h2>
+
+        <h3>Google Maps:</h3>
+        <iframe class="map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1638712956245!2d30.5238!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce57b9497d49%3A0x8b6b1d60f24a61c5!2z0JrQuNGX0LIsINCj0LrRgNCw0ZfQvdCw!5e0!3m2!1suk!2sua!4v1234567890123"
+                title="Google Maps - Київ">
+        </iframe>
+
+        <div class="media-controls">
+            <button onclick="changeMap('kyiv')">Київ</button>
+            <button onclick="changeMap('lviv')">Львів</button>
+            <button onclick="changeMap('odesa')">Одеса</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>6. Інтерактивні зображення &lt;map&gt; та &lt;area&gt;</h2>
+
+        <h3>Карта зображення з областями для кліків:</h3>
+
+        <img src="imgs/mdn-info2.png"
+             alt="Інтерактивна карта"
+             usemap="#imageMap"
+             class="image-map"
+             width=260px
+             height=232px>
+
+        <map name="imageMap">
+            <area shape="poly"
+                  coords="130,147,200,107,130,4,59,107"
+                  onclick="showAreaInfo('JavaScript', 'Ви клікнули на javascript')"
+                  alt="Прямокутна область">
+
+            <area shape="poly"
+                  coords="130,147,130,228,6,219,59,107"
+                  onclick="showAreaInfo('CSS', 'Ви клікнули на css')"
+                  alt="Кругла область">
+
+            <area shape="poly"
+                  coords="130,147,200,107,254,219,130,228"
+                  onclick="showAreaInfo('HTML', 'Ви клікнули на html')"
+                  alt="Полігональна область">
+
+            <area shape="default"
+                  onclick="showAreaInfo('Фон', 'Ви клікнули на фонову область зображення')"
+                  alt="Фонова область">
+        </map>
+
+        <div id="areaResult" style="border: 1px solid black; padding: 10px; margin: 10px 0; min-height: 50px; background-color: lightgray;">
+            Клікніть на різні області зображення вище
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>7. Canvas з JavaScript</h2>
+
+        <div class="grid-2">
+            <div>
+                <h3>Малювання на Canvas:</h3>
+                <canvas id="drawingCanvas" width="300" height="200"></canvas>
+
+                <div class="canvas-controls">
+                    <button onclick="drawRectangle()">Прямокутник</button>
+                    <button onclick="drawCircle()">Коло</button>
+                    <button onclick="drawLine()">Лінія</button>
+                    <button onclick="drawText()">Текст</button>
+                    <button onclick="clearCanvas()">Очистити</button>
+                </div>
+            </div>
+
+            <div>
+                <h3>Анімація Canvas:</h3>
+                <canvas id="animationCanvas" width="300" height="200"></canvas>
+
+                <div class="canvas-controls">
+                    <button onclick="startAnimation()">Старт</button>
+                    <button onclick="stopAnimation()">Стоп</button>
+                    <button onclick="changeColor()">Змінити колір</button>
+                    <button onclick="changeSpeed()">Швидкість</button>
+                </div>
+            </div>
+        </div>
+
+        <h3>Інтерактивний Canvas:</h3>
+        <canvas id="interactiveCanvas" width="600" height="200" onmousemove="drawOnCanvas(event)" onmousedown="startDrawing(event)" onmouseup="stopDrawing()"></canvas>
+
+        <div class="canvas-controls">
+            <button onclick="setBrushSize(2)">Тонка лінія</button>
+            <button onclick="setBrushSize(5)">Середня лінія</button>
+            <button onclick="setBrushSize(10)">Товста лінія</button>
+            <button onclick="setBrushColor('red')">Червоний</button>
+            <button onclick="setBrushColor('blue')">Синій</button>
+            <button onclick="setBrushColor('green')">Зелений</button>
+            <button onclick="clearInteractiveCanvas()">Очистити</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>8. SVG графіка</h2>
+
+        <div class="grid-2">
+            <div>
+                <h3>Статичний SVG:</h3>
+                <div class="svg-container">
+                    <svg width="280" height="180" class="interactive-svg">
+                        <!-- Фон -->
+                        <rect width="280" height="180" fill="lightblue" stroke="black" stroke-width="2"/>
+
+                        <!-- Прямокутники -->
+                        <rect x="20" y="20" width="60" height="40" fill="red" stroke="black"/>
+                        <rect x="100" y="20" width="60" height="40" fill="green" stroke="black"/>
+
+                        <!-- Кола -->
+                        <circle cx="50" cy="120" r="25" fill="yellow" stroke="black"/>
+                        <circle cx="130" cy="120" r="25" fill="orange" stroke="black"/>
+
+                        <!-- Лінії -->
+                        <line x1="200" y1="20" x2="260" y2="60" stroke="purple" stroke-width="3"/>
+                        <line x1="260" y1="20" x2="200" y2="60" stroke="purple" stroke-width="3"/>
+
+                        <!-- Полігон -->
+                        <polygon points="220,100 200,140 240,140" fill="pink" stroke="black"/>
+
+                        <!-- Текст -->
+                        <text x="140" y="170" font-family="Arial" font-size="14" fill="black">Статичний SVG</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <h3>SVG з JavaScript управлінням:</h3>
+        <div class="svg-container">
+            <svg id="controllableSvg" width="550" height="200" class="interactive-svg">
+                <rect x="50" y="50" width="100" height="60" fill="lightgray" stroke="black" id="movableRect"/>
+                <circle cx="300" cy="80" r="30" fill="lightblue" stroke="black" id="scalableCircle"/>
+                <text x="400" y="100" font-family="Arial" font-size="16" fill="black" id="changeableText">SVG Текст</text>
+            </svg>
+        </div>
+
+        <div class="canvas-controls">
+            <button onclick="moveSvgRect()">Рухати прямокутник</button>
+            <button onclick="scaleSvgCircle()">Змінити коло</button>
+            <button onclick="changeSvgText()">Змінити текст</button>
+            <button onclick="resetSvg()">Скинути</button>
+        </div>
+    </div>
+</body>
+</html>
